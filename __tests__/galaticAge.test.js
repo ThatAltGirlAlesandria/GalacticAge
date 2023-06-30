@@ -18,4 +18,7 @@ describe ('superAge', () => {
     expect(calculate.planetAge("venus")).toBe(48.4);
   });
 
+  test(`Should be able to calculate the users current age on Mars`, () => {
+    expect(calculate.planetAge("mars")).toBe(16);
+  })
 });
