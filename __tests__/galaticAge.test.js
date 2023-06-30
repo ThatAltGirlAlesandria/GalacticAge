@@ -1,6 +1,11 @@
 import superAge from "../src/galaticAge";
 
 describe ('superAge', () => {
+  let calculate;
+  beforeEach(() => {
+    calculate = new superAge(30)
+  })
+
   test('should be able to calculate the users current earth age',() => {
     let earthAge = new superAge(30);
     earthAge.age
