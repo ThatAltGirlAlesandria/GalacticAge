@@ -38,4 +38,8 @@ describe ('superAge', () => {
   test(`Should be able to calculate the users remaining age on Mars`, () => {
     expect(calculate.expectedLife("mars")).toBe(42.6)
   });
+
+  test(`Should be able to calculate the users remaining age on Jupiter`, () => {
+    expect(calculate.expectedLife("jupiter")).toBe(6.7)
+  });
 });
