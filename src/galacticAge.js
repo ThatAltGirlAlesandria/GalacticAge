@@ -3,6 +3,7 @@ export default class superAge {
   constructor(age, expectedAge) {
     this.age = age;
     this.expectedAge = expectedAge;
+    this.expectedExpiration = expectedAge - age;
   };
 
   planetAge(planet) {
@@ -30,6 +31,7 @@ export default class superAge {
     let expectedMercury;
     let expectedVenus;
     let expectedMars;
+    let expectedJupiter;
     switch(planet) {
       case "mercury":
         expectedMercury = parseFloat((this.expectedAge/0.24).toFixed(1));
@@ -40,6 +42,30 @@ export default class superAge {
       case "mars":
         expectedMars = parseFloat((this.expectedAge/1.88).toFixed(1));
         return expectedMars;
+      case "jupiter":
+        expectedJupiter = parseFloat((this.expectedAge/11.86).toFixed(1));
+        return expectedJupiter;
+      };
+  };
+
+  remainingLife(planet) {
+    let remainingMercury;
+    let remainingVenus;
+    let remainingMars;
+    let remainingJupiter;
+    switch(planet) {
+      case "mercury":
+        remainingMercury = parseFloat((this.expectedExpiration/0.24).toFixed(1));
+        return remainingMercury;
+      case "venus":
+        remainingVenus = parseFloat((this.expectedExpiration/0.62).toFixed(1));
+        return remainingVenus;
+      case "mars":
+        remainingMars = parseFloat((this.expectedExpiration/1.88).toFixed(1));
+        return remainingMars;
+      case "jupiter":
+        remainingJupiter = parseFloat((this.expectedExpiration/11.86).toFixed(1));
+        return remainingJupiter;
     };
   };
 }
