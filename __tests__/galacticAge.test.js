@@ -44,6 +44,6 @@ describe ('superAge', () => {
   });
 
   test(`Should be able to calculate the users remaining time on Mercury`, () => {
-    expect(calculate.expectedExpiration("mercury")).toBe(208.3)
+    expect(calculate.remainingLife("mercury")).toBe(208.3)
   })
 });
