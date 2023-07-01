@@ -58,4 +58,16 @@ describe ('superAge', () => {
   test(`Should be able to calculate the users remaining time on Jupiter`, () => {
     expect(calculate.remainingLife("jupiter")).toBe(6.5)
   });
+
+  test(`If the user does not input a number it will return null`, () => {
+    expect(calculate.planetAge()).toBe(null)
+  })
+  
+  test(`If the user does not input a number it will return null`, () => {
+    expect(calculate.expectedLife()).toBe(null)
+  })
+
+  test(`If the user does not input a number it will return null`, () => {
+    expect(calculate.remainingLife()).toBe(null)
+  })
 });
