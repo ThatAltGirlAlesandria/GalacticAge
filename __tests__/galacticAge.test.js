@@ -42,4 +42,8 @@ describe ('superAge', () => {
   test(`Should be able to calculate the users remaining age on Jupiter`, () => {
     expect(calculate.expectedLife("jupiter")).toBe(6.7)
   });
+
+  test(`Should be able to calculate the users remaining time on Mercury`, () => {
+    expect(calculate.expectedExpiration("mercury")).toBe(208.3)
+  })
 });
