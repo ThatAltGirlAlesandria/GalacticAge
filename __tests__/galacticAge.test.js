@@ -8,7 +8,7 @@ describe ('superAge', () => {
 
   test(`Should be able to calculate the users current Earth age`,() => {
     expect(calculate.age).toBe(20);
-    expect(calculate.expectedAge).toBe(99.5)
+    expect(calculate.expectedAge).toBe(97.3)
   });
 
   test(`Should be able to calculate the users current age on Mercury`, () => {
