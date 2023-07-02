@@ -71,7 +71,15 @@ describe ('superAge', () => {
     expect(calculate.remainingLife()).toBe(null)
   })
 
-  test(`Should calculate how many years have passed from current age to a prior age`, () => {
+  test(`Should calculate how many years have passed from current age to a prior age on Mercury`, () => {
     expect(calculate.yearsPast("mercury")).toBe(29.2)
+  })
+
+  test(`Should calculate how many years have passed from current age to a prior age on Venus`, () => {
+    expect(calculate.yearsPast("venus")).toBe(11.3)
+  })
+
+  test(`Should calculate how many years have passed from current age to a prior age on Mars`, () => {
+    expect(calculate.yearsPast("mars")).toBe(3.7)
   })
 });
