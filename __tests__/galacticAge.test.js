@@ -82,4 +82,12 @@ describe ('superAge', () => {
   test(`Should calculate how many years have passed from current age to a prior age on Mars`, () => {
     expect(calculate.yearsPast("mars")).toBe(3.7)
   })
+
+  test(`Should calculate how many years have passed from current age to a prior age on Jupiter`, () => {
+    expect(calculate.yearsPast("jupiter")).toBe(.4)
+  })
+
+  test(`If the user does not input a number it will return null`, () => {
+    expect(calculate.yearsPast()).toBe(null)
+  })
 });

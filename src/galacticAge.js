@@ -35,6 +35,7 @@ export default class superAge {
     let mercuryPast;
     let venusPast;
     let marsPast;
+    let jupiterPast;
     switch(planet) {
     case "mercury":
       mercuryPast = parseFloat((this.priorYears/.24).toFixed(1));
@@ -45,6 +46,11 @@ export default class superAge {
     case "mars":
       marsPast = parseFloat((this.priorYears/1.88).toFixed(1));
       return marsPast;
+    case "jupiter":
+      jupiterPast = parseFloat((this.priorYears/18.86).toFixed(1));
+      return jupiterPast;
+    default:
+      return null;
     }
   }
 
