@@ -3,7 +3,7 @@ import superAge from "../src/galacticAge";
 describe ('superAge', () => {
   let calculate;
   beforeEach(() => {
-    calculate = new superAge(20, 97.3)
+    calculate = new superAge(20, 13, 97.3)
   });
 
   test(`Should be able to calculate the users current Earth age`,() => {
@@ -69,5 +69,9 @@ describe ('superAge', () => {
 
   test(`If the user does not input a number it will return null`, () => {
     expect(calculate.remainingLife()).toBe(null)
+  })
+
+  test(`Should calculate how many years have passed from current age to a prior age`, () => {
+    expect(calculate.yearsPast("mercury")).toBe(29.2)
   })
 });
